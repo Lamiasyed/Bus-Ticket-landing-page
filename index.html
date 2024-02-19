@@ -65,9 +65,10 @@
 
 <div class="md:flex hidden w-11/12 mx-auto -mt-9 justify-between z-10">
   <div
-    class="flex bg-white items-center gap-1 px-4 py-2 rounded-xl border-b-2 border-b-green-400"
-  >
-    <div><img src="./images/people.png" alt="" /></div>
+    class="flex bg-white items-center gap-1 px-4 py-2 rounded-xl border-b-2 border-b-green-400">
+    <div>
+        <img src="./images/people.png" alt="" />
+    </div>
     <div>
       <h1 class="font-bold text-3xl">500k+</h1>
       <p class="text-sm">Registered users</p>
@@ -97,23 +98,20 @@
 </header>
 <main class="container mx-auto">
 
-<!-- best offer section start -->
+<!-- offer section  -->
 <section class="space-y-11 mb-14">
   <h1 class="text-4xl font-bold text-center ">Best offers for you</h1>
   
   <!-- coupon section -->
   <div
-  class="flex gap-y-3 flex-col md:flex-row md:gap-y-0 items-center justify-between my-16 w-11/12 mx-auto"
->
-  <div
-    class="flex w-[95%] py-4 md:py-0 md:w-[49%] items-center justify-center px-8 rounded-xl bg-yellow-400"
-  >
+  class="flex gap-y-3 flex-col md:flex-row md:gap-y-0 items-center justify-between my-16 w-11/12 mx-auto">
+
+  <div class="flex w-[95%] py-4 md:py-0 md:w-[49%] items-center justify-center px-8 rounded-xl bg-yellow-400">
     <div
-      class="border-r md:border-r-0 border-r-gray-600 border-dashed pr-1 md:pr-0 mr-2 md:mr-0"
-    >
+      class="border-r md:border-r-0 border-r-gray-600 border-dashed pr-1 md:pr-0 mr-2 md:mr-0">
       <h1 class="font-bold text-3xl">15% OFF</h1>
       <p class="font-bold mt-2">
-        on your next purchase <br />
+        on your next purchase <br/>
         <span class="font-thin">use by February 2025</span>
       </p>
     </div>
@@ -127,11 +125,8 @@
     </div>
   </div>
   <div
-    class="flex w-[95%] py-4 md:py-0 md:w-[49%] justify-center items-center px-8 rounded-xl bg-pink-400"
-  >
-    <div
-      class="border-r md:border-r-0 border-r-gray-600 border-dashed pr-1 md:pr-0 mr-2 md:mr-0"
-    >
+    class="flex w-[95%] py-4 md:py-0 md:w-[49%] justify-center items-center px-8 rounded-xl bg-pink-400" >
+    <div class="border-r md:border-r-0 border-r-gray-600 border-dashed pr-1 md:pr-0 mr-2 md:mr-0">
       <h1 class="font-bold text-3xl">20% OFF</h1>
       <p class="font-bold mt-2">
         on your next purchase <br />
@@ -151,9 +146,8 @@
       <button class="btn btn-ghost text-[#1DD100] border-[#1DD100]">See All Offers</button>
   </div>
 </section>
-
 <!-- P.H Paribahan ticket price and design part -->
-<section class="space-y-11 mb-14 rounded-t-3xl">
+<section id="ticket-container"class="space-y-11 mb-14 rounded-t-3xl">
   <h1 class="text-4xl font-bold text-center ">SA Paribahan</h1>
   <p class="text-center">Yes, you can run unit tests and view the results directly within the app. The integrated <br>testing features allow for a streamlined .</p>
 
@@ -371,25 +365,27 @@
           <h1 class="text-2xl font-semibold border-b border-dashed pb-6 ">Select Your Seat</h1>
           <div class="p-3 lg:p-8 bg-[#F7F8F8] space-y-3 rounded-xl mt-6">
               <div class="grid grid-cols-3 font-medium border-b border-dashed p-4">
-                  <h1>Seat<span></span></h1>
+                  <h1>Seat<span id="add-seat" class="bg-[#1DD100] text-white px-1 rounded-lg text-2 ">0</span></h1>
                   <h1>Class</h1>
-                  <h1 class="flex justify-end">Price</h1>
+             <h1 class="flex justify-end">Price</h1>
               </div>
+              <div id="seat-price-list" class="grid grid-cols-3 p-4 font-bold">
+            </div>
               <hr>
               <div class="flex justify-between">
                   <h1>Total Price</h1>
-                  <h1>BDT <span>0</span> </h1>
+                  <h1>BDT<span id="total-price">0<span></h1>
               </div>
               <div>
-                  <label class="input input-bordered flex items-center gap-2">
-                      <input type="text" class="grow w-full" placeholder="Have any coupon? " />
-                      <span
+                  <label id="input-container" class="input input-bordered flex items-center gap-2">
+                      <input id="input-coupon" type="text" class="grow w-full" placeholder="Have any coupon?"/>
+                      <span onclick="applyButton()"
                           class="badge badge-info h-[40px] w-[80px] rounded-lg bg-[#1DD100] text-white font-bold">Apply</span>
                   </label>
               </div>
               <div class="flex justify-between">
                   <h1>Grand Total</h1>
-                  <h1>BDT <span>0</span> </h1>
+                  <h1>BDT <span id="grand-total">0<span></h1>
               </div>
           </div>
           <div>
