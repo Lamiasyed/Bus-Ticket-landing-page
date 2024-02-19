@@ -5,7 +5,7 @@ for (const button of buttons) {
     let singleBtn = button.childNodes[1].innerText;
     button.addEventListener('click', function () {
 
-        // ticket list
+        
         let availableSeats = document.getElementById('available-seats');
         lessSeat = lessSeat - 1;
         availableSeats.innerText = lessSeat;
@@ -30,9 +30,6 @@ for (const button of buttons) {
         // Total Price
         const totalPrice = document.getElementById('total-price');
         totalPrice.innerText = parseInt(totalPrice.innerText) + parseInt(p2.innerText);
-
-        // coupon section
-
     })
 }
 function applyButton() {
@@ -41,7 +38,7 @@ function applyButton() {
     if (inputCoupon === 'NEW15') {
         const totalPrice = document.getElementById('total-price').innerText;
         const convertTotalPrice = parseInt(totalPrice);
-        // discount price
+        
         const discountPrice = convertTotalPrice * 0.15;
         const finalPrice = convertTotalPrice - discountPrice;
         document.getElementById('grand-total').innerText = finalPrice;
@@ -52,7 +49,7 @@ function applyButton() {
     else if (inputCoupon === 'Couple 20') {
         const totalPrice = document.getElementById('total-price').innerText;
         const convertTotalPrice = parseInt(totalPrice);
-        // discount price
+   
         const discountPrice = convertTotalPrice * 0.20;
         const finalPrice = convertTotalPrice - discountPrice;
         document.getElementById('grand-total').innerText = finalPrice;
